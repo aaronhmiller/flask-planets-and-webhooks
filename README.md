@@ -8,6 +8,18 @@ Run it like this:
 FLASK_APP=app.py python -mflask run
 ```
 
+In its more portable form, run it as a Docker Container:
+```
+docker run -d --name planets -p 5000:5000 kongaaron/flask-planets
+```
+
+To build and tag a new image:
+```
+docker build -t kongaaron/flask-planets:1.0 -t kongaaron/flask-planets:latest .
+```
+Once you tag and build, upload to `hub.docker.com`:
+`docker push kongaaron/flask-planets`
+
 This was created for a one-off talk, questions, comments and PRs all welcome but I'm not actively working on this project so please be patient!
 
 ## HTTP Tools
