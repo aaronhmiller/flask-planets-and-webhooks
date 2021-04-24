@@ -45,6 +45,8 @@ paths:
         schema:
           type: number
           example: 4
+          min: 1
+          max: 9
 
       responses:
         '200':
