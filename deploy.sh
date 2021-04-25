@@ -7,4 +7,4 @@ elif [ "$2" = "rebuild" ]; then
   docker push kongaaron/flask-planets && docker push kongaaron/flask-planets:$1
 fi
 docker stop planets && docker rm planets
-docker run -d --network docker-compose_default --name planets -p 5000:5000 kongaaron/flask-planets:2.0-pluto
+docker run -d --network docker-compose_default --name planets -p 5000:5000 kongaaron/flask-planets:$1
