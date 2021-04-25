@@ -1,4 +1,4 @@
-openapi: 3.0.3
+openapi: 3.0.2
 info:
   title: Planets and Webhooks Demo API
   version: 0.0.1
@@ -73,8 +73,6 @@ components:
           type: number
           description: Number of moons, according to NASA
           example: 62
-
-
 tags:
   - name: planets
     description: API containing solar system data
