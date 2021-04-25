@@ -57,8 +57,8 @@ paths:
         schema:
           type: number
           example: 4
-          min: 1
-          max: 8
+          minimum: 1
+          maximum: 8
       x-kong-plugin-request-validator:
         enabled: true
 
