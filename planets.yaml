@@ -8,7 +8,7 @@ info:
     url: https://github.com/lornajane/flask-planets-and-webhooks
     email: github@lornajane.net
 servers:
-  - url: http://localhost:5000
+  - url: http://planets:5000
     description: Sample project running locally
     x-kong-plugin-cors:
       config:
