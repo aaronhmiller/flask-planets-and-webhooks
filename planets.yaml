@@ -10,6 +10,18 @@ info:
 servers:
   - url: http://localhost:5000
     description: Sample project running locally
+
+x-kong-plugin-cors:
+  config:
+    origins:
+      - '*'
+x-kong-plugin-rate-limiting-advanced:
+  config:
+    limit: -3
+    window_size: -10
+    sync_rate: -1
+
+
 externalDocs:
   description: GitHub project for the code and information about this API
   url: https://github.com/lornajane/flask-planets-and-webhooks
@@ -32,6 +44,8 @@ paths:
                   $ref: "#/components/schemas/planet"
 
   /planets/{planetId}:
+    x-kong-plugin-request-validator:
+      enabled: true
     get:
       operationId: onePlanet
       summary: Fetch one planet by position
