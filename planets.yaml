@@ -10,17 +10,17 @@ info:
 servers:
   - url: http://localhost:5000
     description: Sample project running locally
-
-x-kong-plugin-cors:
-  config:
-    origins:
-      - '*'
-x-kong-plugin-rate-limiting-advanced:
-  config:
-    limit: -3
-    window_size: -10
-    sync_rate: -1
-
+    x-kong-plugin-cors:
+      config:
+        origins:
+        - '*'
+    x-kong-plugin-rate-limiting-advanced:
+      config:
+        limit:
+        - 3
+        window_size:
+        - 10
+        sync_rate: -1
 
 externalDocs:
   description: GitHub project for the code and information about this API
